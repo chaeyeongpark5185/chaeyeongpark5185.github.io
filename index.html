@@ -88,8 +88,11 @@ section{padding:64px 0 48px}
 section.band{background:#F3F3ED}
 @media (prefers-color-scheme: dark){section.band{background:#1B1E24}}
 .hl{
-  background:linear-gradient(transparent 58%, var(--hl) 58%, var(--hl) 94%, transparent 94%);
-  padding:0 .08em;
+  background:var(--hl);
+  padding:.02em .12em;
+  border-radius:.12em;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
 }
 .hl-soft{
   background:linear-gradient(transparent 60%, var(--hl-soft) 60%, var(--hl-soft) 94%, transparent 94%);

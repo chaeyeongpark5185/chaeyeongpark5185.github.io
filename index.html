@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>박채영 — 교육기획 포트폴리오</title>
+<meta name="description" content="기술과 사람을 연결해 성장을 만들어가는 교육기획자 박채영의 포트폴리오">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --paper:#FCFCFA;
+  --ink:#20242D;
+  --muted:#6E7480;
+  --line:#E5E4DE;
+  --hl:#FFE066;
+  --hl-soft:rgba(255,224,102,.55);
+  --accent:#002C5F;
+  --accent-soft:#EDF2F8;
+  --mono:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#16181D;
+    --ink:#E9E9E4;
+    --muted:#9AA0AB;
+    --line:#2B2E36;
+    --hl:rgba(255,224,102,.32);
+    --hl-soft:rgba(255,224,102,.22);
+    --accent:#8FB4E3;
+    --accent-soft:#1D2532;
+  }
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.8;
+  font-size:17.5px;
+  -webkit-font-smoothing:antialiased;
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+
+/* ---------- top bar ---------- */
+.top{
+  border-bottom:1px solid var(--line);
+  padding:16px 0;
+}
+.top .wrap{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.top img{height:24px;display:block}
+.top .for{
+  margin-left:auto;
+  font-family:var(--mono);
+  font-size:.84rem;
+  color:var(--muted);
+}
+@media (prefers-color-scheme: dark){
+  .top img{background:#fff;padding:4px 8px;border-radius:6px;height:30px}
+}
+
+/* ---------- shared ---------- */
+.eyebrow{
+  font-family:var(--mono);
+  font-size:.88rem;
+  font-weight:600;
+  color:var(--accent);
+  letter-spacing:.02em;
+  display:block;
+  margin-bottom:8px;
+}
+h2{
+  font-size:1.65rem;
+  font-weight:800;
+  letter-spacing:-.025em;
+  margin-bottom:26px;
+  word-break:keep-all;
+}
+section{padding:66px 0 6px}
+.hl{
+  background:linear-gradient(transparent 58%, var(--hl) 58%, var(--hl) 94%, transparent 94%);
+  padding:0 .08em;
+}
+.hl-soft{
+  background:linear-gradient(transparent 60%, var(--hl-soft) 60%, var(--hl-soft) 94%, transparent 94%);
+  padding:0 .06em;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* ---------- hero ---------- */
+header.hero{padding:76px 0 56px}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 168px;
+  gap:40px;
+  align-items:center;
+}
+.hero-grid img{
+  width:168px;
+  height:auto;
+  border-radius:14px;
+  border:1px solid var(--line);
+}
+h1{
+  font-size:clamp(2rem,5.6vw,3.1rem);
+  font-weight:800;
+  letter-spacing:-.035em;
+  line-height:1.3;
+  margin-bottom:22px;
+  word-break:keep-all;
+}
+.lede{
+  font-size:1.06rem;
+  color:var(--muted);
+  max-width:56ch;
+  word-break:keep-all;
+}
+.lede b{color:var(--ink);font-weight:600}
+
+/* ---------- stats ---------- */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  margin-top:52px;
+}
+.stats>div{padding:22px 8px 20px;text-align:center}
+.stats>div+div{border-left:1px solid var(--line)}
+.stats .num{
+  font-family:var(--mono);
+  font-size:1.5rem;
+  font-weight:700;
+  letter-spacing:-.02em;
+  display:block;
+  color:var(--accent);
+}
+.stats .lab{font-size:.85rem;color:var(--muted);display:block;margin-top:3px;word-break:keep-all}
+
+/* ---------- skills ---------- */
+.skills{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden;
+}
+.skills>div{
+  padding:22px 26px;
+  border-top:1px solid var(--line);
+}
+.skills>div:nth-child(-n+2){border-top:none}
+.skills>div:nth-child(odd){border-right:1px solid var(--line)}
+.skills h3{
+  font-family:var(--mono);
+  font-size:.84rem;
+  color:var(--accent);
+  font-weight:600;
+  margin-bottom:8px;
+}
+.skills p{font-size:.98rem;word-break:keep-all}
+.skills .period{color:var(--muted);font-size:.85rem}
+
+/* ---------- entries ---------- */
+.entry{
+  border-top:1px solid var(--line);
+  padding:32px 0 36px;
+}
+.entry:first-of-type{border-top:none;padding-top:6px}
+.entry-head{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:6px 14px;
+  margin-bottom:4px;
+}
+.entry-head h3{font-size:1.22rem;font-weight:700;letter-spacing:-.01em;word-break:keep-all}
+.entry-head .role{color:var(--muted);font-size:.95rem}
+.entry-head .period{
+  margin-left:auto;
+  font-family:var(--mono);
+  font-size:.85rem;
+  color:var(--muted);
+  white-space:nowrap;
+}
+.entry .summary{
+  font-weight:600;
+  font-size:1rem;
+  margin:8px 0 14px;
+  word-break:keep-all;
+}
+.entry ul{list-style:none}
+.entry li{
+  position:relative;
+  padding-left:18px;
+  margin-bottom:10px;
+  font-size:1rem;
+  word-break:keep-all;
+}
+.entry li::before{
+  content:"—";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+  font-size:.85rem;
+  top:1px;
+}
+.proj-award{
+  font-family:var(--mono);
+  font-size:.82rem;
+  color:var(--accent);
+  background:var(--accent-soft);
+  padding:2px 10px;
+  border-radius:20px;
+}
+
+/* ---------- photo galleries (균일한 타일, 크롭 없음) ---------- */
+.shots{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px 14px;
+  margin-top:20px;
+}
+.shots figure{margin:0}
+.shots img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:contain;
+  border-radius:10px;
+  border:1px solid var(--line);
+  display:block;
+  background:#fff;
+}
+.shots figcaption{
+  font-size:.83rem;
+  color:var(--muted);
+  margin-top:6px;
+  text-align:center;
+  word-break:keep-all;
+}
+.shots figure.fill img{object-fit:cover}
+
+/* ---------- built ---------- */
+.built-intro{color:var(--muted);font-size:.98rem;margin-bottom:26px;max-width:60ch;word-break:keep-all}
+.tool{
+  border-top:1px solid var(--line);
+  padding:28px 0 30px;
+  display:grid;
+  grid-template-columns:190px 1fr;
+  gap:6px 32px;
+}
+.tool:last-of-type{border-bottom:1px solid var(--line)}
+.tool h3{font-size:1.06rem;font-weight:700;letter-spacing:-.01em;word-break:keep-all}
+.tool .tag{
+  display:block;
+  font-family:var(--mono);
+  font-size:.8rem;
+  color:var(--muted);
+  margin-top:6px;
+}
+.tool .problem{color:var(--muted);font-size:.97rem;margin-bottom:8px;word-break:keep-all}
+.tool .solution{font-size:1rem;word-break:keep-all}
+
+/* ---------- footer ---------- */
+footer{
+  margin-top:84px;
+  border-top:1px solid var(--line);
+  padding:46px 0 72px;
+}
+footer .big{
+  font-size:1.4rem;
+  font-weight:700;
+  letter-spacing:-.02em;
+  margin-bottom:10px;
+  word-break:keep-all;
+}
+footer .contact{font-family:var(--mono);font-size:.95rem;color:var(--muted)}
+
+/* ---------- reveal ---------- */
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:680px){
+  header.hero{padding:52px 0 44px}
+  section{padding:52px 0 6px}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .hero-grid img{width:132px;order:-1}
+  .stats{grid-template-columns:1fr 1fr}
+  .stats>div{border-left:none !important;border-top:1px solid var(--line)}
+  .stats>div:nth-child(-n+2){border-top:none}
+  .stats>div:nth-child(odd){border-right:1px solid var(--line)}
+  .skills{grid-template-columns:1fr}
+  .skills>div{border-right:none !important;border-top:1px solid var(--line)}
+  .skills>div:first-child{border-top:none}
+  .tool{grid-template-columns:1fr;gap:8px}
+  .entry-head .period{margin-left:0;width:100%}
+  .shots{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <img src="img/autoever_logo.svg" alt="현대오토에버">
+    <span class="for">HRD · L&amp;D/조직문화 지원 포트폴리오 — 박채영</span>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">// 현대오토에버 HRD [신입] L&amp;D/조직문화 지원자</span>
+      <h1>기술과 사람을 연결해<br><span class="hl">성장</span>을 만들어갑니다.</h1>
+      <p class="lede">SW 전공으로 기술을 이해하고, 데이터로 교육의 효과를 확인하며,<br>
+      반복되는 비효율은 <b>AI로 도구를 만들어 해결</b>하는 <b>박채영</b>입니다.</p>
+    </div>
+    <img src="img/profile.jpg" alt="박채영 프로필 사진">
+  </div>
+
+  <div class="stats">
+    <div><span class="num">0→500+</span><span class="lab">LMS 회원 직접 성장</span></div>
+    <div><span class="num">100%</span><span class="lab">직접 제안한 과정 정원 조기 마감</span></div>
+    <div><span class="num">60%+</span><span class="lab">전사 근태시스템 사용률</span></div>
+    <div><span class="num">B2C·B2B·B2G</span><span class="lab">교육사업 전 영역 수행</span></div>
+  </div>
+</header>
+
+<section id="about" class="reveal">
+  <span class="eyebrow">// profile</span>
+  <h2>학력 &amp; 스킬</h2>
+
+  <div class="skills">
+    <div>
+      <h3>EDUCATION</h3>
+      <p>아주대학교 디지털미디어학과<br>인공지능융합학과 복수전공<br><span class="period">2023.03 — 2026.02</span></p>
+    </div>
+    <div>
+      <h3>교육 기획 · 운영</h3>
+      <p>교육 니즈 분석·수요조사 설계, 직무별 맞춤 커리큘럼 기획, 교육 제안서 작성, 교육 효과 측정·만족도 분석, HRD-Net 훈련 행정</p>
+    </div>
+    <div>
+      <h3>데이터 · AI 활용</h3>
+      <p>SW 전공 기반 개발 경험, 생성형 AI(Claude Code·Codex 등) 활용 자동화·웹앱 개발, 데이터 분석·시각화 대시보드 제작</p>
+    </div>
+    <div>
+      <h3>콘텐츠 · 커뮤니케이션</h3>
+      <p>HTML 상세페이지·eDM 등 모집 콘텐츠 제작,<br>Figma UI/UX 설계, 교육생·발주처·강사 등 이해관계자 커뮤니케이션</p>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="reveal">
+  <span class="eyebrow">// work</span>
+  <h2>일한 경험</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>솔트룩스 AX교육사업팀</h3>
+      <span class="role">주임/매니저</span>
+      <span class="period">2025.10 — 현재</span>
+    </div>
+    <p class="summary">AX 교육사업의 기획 · 모집 · 운영 · 성과 분석 전 과정 수행</p>
+    <ul>
+      <li><b>B2C 공개교육</b> — 과정 기획, 강사 섭외·커뮤니케이션, 홍보·마케팅(HTML 상세페이지·eDM·광고 소재), 운영, 성과 평가까지 <span class="hl-soft">전 과정 직접 수행</span> — 회원 0명 → 500명 이상, 신규 과정 제안으로 <span class="hl-soft">담당 과정 최초 정원 조기 마감</span></li>
+      <li><b>B2B 기업교육</b> — 공개교육 성과를 바탕으로 담당 확대, 사업·교육 제안서 작성, 임직원 AX 역량진단(수요조사) 기반 개발/비개발 직군별 맞춤 교육 설계, 만족도 분석 보고, 중소기업 인재키움 프리미엄 훈련 운영(<span class="hl-soft">HRD-Net 훈련 행정</span>)</li>
+      <li><b>B2G 교육사업</b> — KOICA 전사 AX 역량 강화 교육 운영, 서울경제진흥원 새싹(SeSAC) 교육과정 운영 지원, 산업맞춤형 혁신바우처 지원사업, AI 아이디어톤 기획·운영</li>
+      <li>강사 풀 구축·관리, 교육생·발주처·파트너 등 이해관계자 커뮤니케이션</li>
+    </ul>
+    <div class="shots">
+      <figure><img src="img/lms-home.jpg" alt="솔트룩스 교육 홈페이지 메인" loading="lazy"><figcaption>콘텐츠 전체를 기획·제작한 <a href="https://edu.saltlux.com" target="_blank" rel="noopener">교육 홈페이지 ↗</a></figcaption></figure>
+      <figure><img src="img/work-detail-html.png" alt="직접 제작한 공개교육 상세페이지" loading="lazy"><figcaption>직접 제작한 공개교육 HTML 상세페이지</figcaption></figure>
+      <figure><img src="img/work-detail-refund.png" alt="환급과정 상세페이지" loading="lazy"><figcaption>환급과정 HTML 상세페이지</figcaption></figure>
+      <figure class="fill"><img src="img/work-open1.jpg" alt="교육 진행 현장" loading="lazy"><figcaption>교육 진행 현장</figcaption></figure>
+      <figure class="fill"><img src="img/work-open2.jpg" alt="교육 진행 현장" loading="lazy"><figcaption>교육 진행 현장</figcaption></figure>
+      <figure class="fill"><img src="img/work-class3.jpg" alt="교육 진행 현장" loading="lazy"><figcaption>교육 진행 현장</figcaption></figure>
+      <figure><img src="img/work-ideathon.jpg" alt="AI 아이디어톤 소개서" loading="lazy"><figcaption>AI 아이디어톤 기획</figcaption></figure>
+      <figure><img src="img/work-ideathon2.jpg" alt="AI 아이디어톤 진행 현장" loading="lazy"><figcaption>AI 아이디어톤 진행</figcaption></figure>
+      <figure><img src="img/work-class2.jpg" alt="프로젝트 발표회 및 수료식" loading="lazy"><figcaption>프로젝트 발표회 · 수료식</figcaption></figure>
+      <figure><img src="img/hrdnet-admin.png" alt="HRD-Net 행정지원시스템" loading="lazy"><figcaption>HRD-Net 행정지원시스템 운영</figcaption></figure>
+      <figure><img src="img/hrdnet-admin2.png" alt="HRD-Net 훈련 관리" loading="lazy"><figcaption>HRD-Net 훈련생 등록·관리</figcaption></figure>
+      <figure><img src="img/hrdnet-apply.png" alt="HRD-Net 훈련과정 인정신청" loading="lazy"><figcaption>훈련과정 인정신청</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>아주대학교 유학생입학팀</h3>
+      <span class="role">인턴</span>
+      <span class="period">2024.08 — 2025.08</span>
+    </div>
+    <p class="summary">순수외국인특별전형 입시 지원 및 유학생 관리 행정</p>
+    <ul>
+      <li>원서 작성 가이드 <span class="hl-soft">한국어·영어 2종(50쪽) 직접 제작</span> — 문의 건수 감소, 근무 종료 후에도 지속 활용 중</li>
+      <li>체크리스트 기반 상호 검토로 <span class="hl-soft">200여 명 비자 변경(D4→D2) 서류 무실수 처리</span></li>
+      <li>한국어·영어 이중 언어 유학생 상담, 반복 문의 매뉴얼화</li>
+    </ul>
+    <div class="shots">
+      <figure><img src="img/work-admission.jpg" alt="유학생 원서 작성 가이드" loading="lazy"><figcaption>직접 만든 원서 작성 가이드</figcaption></figure>
+      <figure><img src="img/work-admission2.jpg" alt="외국인등록 안내 가이드" loading="lazy"><figcaption>외국인등록 안내 가이드 (한·영)</figcaption></figure>
+      <figure><img src="img/work-orientation.jpg" alt="신입 유학생 오리엔테이션" loading="lazy"><figcaption>신입 유학생 오리엔테이션 운영 지원</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="built" class="reveal">
+  <span class="eyebrow">// built with AI</span>
+  <h2>만든 것들</h2>
+  <p class="built-intro">운영하다 마주친 비효율을 그냥 넘기지 않았습니다.<br>
+  문제를 정의하고, 생성형 AI를 활용해 작동하는 도구로 만들어 해결했습니다.</p>
+
+  <div class="tool">
+    <div>
+      <h3>근태관리시스템</h3>
+      <span class="tag">web app · 전사 배포</span>
+    </div>
+    <div>
+      <p class="problem">주 46시간제 근무 형태로 구성원들이 매번 근무시간을 수기로 계산해야 하는 비효율 발생</p>
+      <p class="solution">출퇴근 입력만으로 누적·부족·초과 시간이 자동 계산·시각화되는 시스템 직접 개발<br>
+      팀 내부용에서 전사 그룹웨어로 확산 — <span class="hl-soft">직원 60% 이상 사용 중</span></p>
+    </div>
+  </div>
+
+  <div class="shots" style="margin-top:0;padding:20px 0 26px">
+    <figure><img src="img/tool-attend1.jpg" alt="근태관리시스템 대시보드" loading="lazy"><figcaption>월간 근무 현황 대시보드</figcaption></figure>
+    <figure><img src="img/tool-attend2.jpg" alt="근태관리시스템 일별 기록" loading="lazy"><figcaption>일별 근무 기록 · 자동 계산</figcaption></figure>
+    <figure><img src="img/tool-feedback.jpg" alt="사용 동료들의 반응" loading="lazy"><figcaption>실제 사용 중인 동료들의 반응</figcaption></figure>
+  </div>
+
+  <div class="tool" style="border-top:1px solid var(--line)">
+    <div>
+      <h3>교육 문의 알림 자동화</h3>
+      <span class="tag">automation</span>
+    </div>
+    <div>
+      <p class="problem">교육 인바운드 문의가 타 부서 문의와 섞여 확인·대응 지연</p>
+      <p class="solution">교육 관련 문의 발생 시 팀 메일 자동 알림 구성 — 응대 속도 개선</p>
+    </div>
+  </div>
+
+  <div class="shots" style="margin-top:0;padding:20px 0 26px">
+    <figure><img src="img/tool-inquiry.png" alt="문의하기 자동화 화면" loading="lazy"><figcaption>교육 문의 자동 알림 구성</figcaption></figure>
+    <figure><img src="img/tool-inquiry2.png" alt="문의 내역 자동 축적 스프레드시트" loading="lazy"><figcaption>문의 내역 스프레드시트 자동 축적</figcaption></figure>
+  </div>
+
+  <div class="tool" style="border-top:1px solid var(--line)">
+    <div>
+      <h3>환급 대상 확인 페이지</h3>
+      <span class="tag">web page</span>
+    </div>
+    <div>
+      <p class="problem">기업 담당자마다 교육비 환급 가능 여부를 문의로 일일이 확인해야 하는 번거로움</p>
+      <p class="solution">환급 대상 여부를 스스로 확인하고 바로 문의를 남길 수 있는 페이지 기획·제작·배포</p>
+    </div>
+  </div>
+
+  <div class="shots" style="margin-top:0;padding:20px 0 26px">
+    <figure><img src="img/tool-refundcheck.png" alt="환급 대상 확인 페이지 화면" loading="lazy"><figcaption>환급 대상 확인 페이지</figcaption></figure>
+    <figure><img src="img/tool-refundcheck2.png" alt="환급 여부 확인 화면 2" loading="lazy"><figcaption>환급 여부 확인 결과 화면</figcaption></figure>
+  </div>
+
+  <div class="tool">
+    <div>
+      <h3>사전 AX 역량 진단 페이지</h3>
+      <span class="tag">prototype</span>
+    </div>
+    <div>
+      <p class="problem">교육 전 수요조사부터 사후 효과 측정까지 조사·분석 과정이 수작업으로 반복</p>
+      <p class="solution">진단 → 교육 → 효과 측정 프로세스 자동화의 첫 단계로<br>
+      사전 AX 역량 진단 페이지 제작 — 교육 홈페이지에 적용</p>
+    </div>
+  </div>
+
+  <div class="shots" style="margin-top:0;padding:20px 0 4px">
+    <figure><img src="img/lms-diag.jpg" alt="AI 역량 진단 페이지" loading="lazy"><figcaption>AX 역량 진단 페이지</figcaption></figure>
+    <figure><img src="img/lms-diag2.png" alt="AX 역량 진단 결과 페이지" loading="lazy"><figcaption>진단 결과 페이지</figcaption></figure>
+  </div>
+</section>
+
+<section id="teach" class="reveal">
+  <span class="eyebrow">// teaching</span>
+  <h2>가르친 시간</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>코딩 교육봉사 동아리 SWeat</h3>
+      <span class="period">대학 재학 중</span>
+    </div>
+    <ul>
+      <li>수원시 초·중·고등학교 방문 정기 SW 교육 — 엔트리·언플러그드·AI 기초·<span class="hl-soft">파이썬 데이터 분석</span> 교육 진행</li>
+      <li>지역 아동센터·도서관에서 초등학생·시니어 대상 디지털 기초 교육, 방학 중 SW 창의캠프 보조 튜터</li>
+      <li>동아리 스터디로 학습 자료 공동 제작, 연령별 눈높이 수업 기법 체득</li>
+    </ul>
+    <div class="shots">
+      <figure><img src="img/teach-sweat.jpg" alt="초등학교 SW 교육 현장" loading="lazy"><figcaption>초등학교 방문 SW 교육</figcaption></figure>
+      <figure><img src="img/teach-sweat2.jpg" alt="언플러그드 활동 교육" loading="lazy"><figcaption>언플러그드 활동 수업</figcaption></figure>
+      <figure><img src="img/teach-sweat3.jpg" alt="1:1 교육 지도" loading="lazy"><figcaption>1:1 실습 지도</figcaption></figure>
+      <figure><img src="img/teach-sweat4.jpg" alt="교실 수업 현장" loading="lazy"><figcaption>교실 수업 현장</figcaption></figure>
+      <figure class="fill"><img src="img/teach-sweat5.jpg" alt="교실 수업 현장" loading="lazy"><figcaption>교실 수업 현장</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>국립중앙도서관 청년 디지털 봉사단 IT(잇)다</h3>
+      <span class="period">2024</span>
+    </div>
+    <ul>
+      <li>중장년층 대상 「AI 리터러시 아카데미」 실습 보조 — 생성형 AI(ChatGPT·미드저니) 활용법 교육</li>
+      <li><span class="hl-soft">전문 용어 대신 일상적 표현과 비유로 눈높이 설명</span>, 단계별 시연·1:1 실습 보조 — "쉽게 설명해줘서 이해가 잘 된다" 피드백</li>
+      <li>현장 관찰 기반 도서관 교육 서비스 개선 의견서 작성·제출</li>
+    </ul>
+    <div class="shots">
+      <figure><img src="img/teach-itda2.jpg" alt="교육 진행 강의장" loading="lazy"><figcaption>교육 진행 현장</figcaption></figure>
+      <figure><img src="img/teach-itda-cert.jpg" alt="봉사단 수료증" loading="lazy"><figcaption>국립중앙도서관 수료증</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>아주대 국제대학원 봉사단체 누비아주</h3>
+      <span class="period">대학 재학 중</span>
+    </div>
+    <p class="summary">구성원 교류 행사 기획·운영 — 소속감과 몰입을 만든 경험</p>
+    <ul>
+      <li>대외홍보팀·영상팀 — 교류 행사 기획·운영 및 현장 진행</li>
+      <li>포토샵·캔바·프리미어 프로 활용 카드뉴스·포스터·굿즈(티셔츠·포토북)·홍보 영상 3편 제작 — 행사 참여율·만족도 제고</li>
+    </ul>
+    <div class="shots">
+      <figure><img src="img/teach-nubi.jpg" alt="누비아주 홍보 콘텐츠 모음" loading="lazy"><figcaption>직접 만든 카드뉴스·포스터</figcaption></figure>
+      <figure><img src="img/teach-nubi2.jpg" alt="행사 현장" loading="lazy"><figcaption>교류 행사 현장 진행</figcaption></figure>
+      <figure><img src="img/teach-nubi4.jpg" alt="교류 행사 단체 사진" loading="lazy"><figcaption>교류 행사 운영</figcaption></figure>
+      <figure><img src="img/teach-nubi-video.jpg" alt="홍보 영상" loading="lazy"><figcaption>기획·편집한 홍보 영상</figcaption></figure>
+      <figure><img src="img/teach-nubi3.jpg" alt="웰컴 영상" loading="lazy"><figcaption>신입 환영 영상 제작</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="project" class="reveal">
+  <span class="eyebrow">// project</span>
+  <h2>프로젝트</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>만두피 — 두피 분석 기반 맞춤 추천 앱</h3>
+      <span class="proj-award">Softcon 우수상</span>
+      <span class="period">졸업프로젝트</span>
+    </div>
+    <ul>
+      <li>사용자 설문·인터뷰로 요구사항 도출, 페르소나 작성</li>
+      <li>Figma로 와이어프레임·UI/UX 프로토타입 설계 담당, 두피 이미지 분석 기반 추천 기능 구현 협업</li>
+      <li>약 200만 원 팀 활동비 관리 — 결제 유형별 체크리스트·증빙 체계화로 <span class="hl-soft">예산 전액 수령</span></li>
+      <li>사용자 테스트 피드백을 반영한 UI/UX 개선으로 <span class="hl-soft">교내 Softcon 미디어 부문 우수상</span> 수상</li>
+    </ul>
+    <div class="shots">
+      <figure><img src="img/proj-mandu.jpg" alt="만두피 앱 화면" loading="lazy"><figcaption>만두피 앱 UI</figcaption></figure>
+      <figure><img src="img/proj-mandu2.jpg" alt="만두피 개발 내용" loading="lazy"><figcaption>두피 분석 · 추천 기능 설계</figcaption></figure>
+      <figure><img src="img/proj-award.jpg" alt="Softcon 우수상 수상" loading="lazy"><figcaption>Softcon 우수상 수상</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<footer class="reveal">
+  <p class="big">인재의 성장이 곧 비즈니스가 되는 곳에서,<br>그 성장을 설계하는 사람이 되겠습니다.</p>
+  <p class="contact">박채영 · <a href="mailto:codud5185@naver.com">codud5185@naver.com</a></p>
+</footer>
+
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+const io = new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target);} });
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

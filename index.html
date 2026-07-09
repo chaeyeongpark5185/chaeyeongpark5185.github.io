@@ -78,10 +78,10 @@ body{
   margin-bottom:8px;
 }
 h2{
-  font-size:1.65rem;
+  font-size:2.1rem;
   font-weight:800;
-  letter-spacing:-.025em;
-  margin-bottom:26px;
+  letter-spacing:-.03em;
+  margin-bottom:34px;
   word-break:keep-all;
 }
 section{padding:64px 0 48px}
@@ -205,9 +205,10 @@ h1{
 .entry ul{list-style:none}
 .entry li{
   position:relative;
-  padding-left:18px;
-  margin-bottom:10px;
+  padding-left:26px;
+  margin-bottom:16px;
   font-size:1rem;
+  line-height:1.85;
   word-break:keep-all;
 }
 .entry li::before{
@@ -217,6 +218,21 @@ h1{
   color:var(--muted);
   font-size:.85rem;
   top:1px;
+}
+.entry ul.numbered{counter-reset:n}
+.entry ul.numbered li::before{
+  counter-increment:n;
+  content:counter(n);
+  font-size:.8rem;
+  font-weight:700;
+  color:var(--accent);
+  background:var(--accent-soft);
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  text-align:center;
+  line-height:20px;
+  top:5px;
 }
 .proj-award{
   font-family:var(--mono);
@@ -388,7 +404,7 @@ footer .contact{font-family:var(--mono);font-size:.95rem;color:var(--muted)}
       <span class="period">2025.10 — 현재</span>
     </div>
     <p class="summary">AX 교육사업의 기획 · 모집 · 운영 · 성과 분석 전 과정 수행</p>
-    <ul>
+    <ul class="numbered">
       <li><b>B2C 공개교육</b> — 과정 기획, 강사 섭외·커뮤니케이션, 홍보·마케팅(HTML 상세페이지·eDM·광고 소재), 운영, 성과 평가까지 <span class="hl-soft">전 과정 직접 수행</span> — 회원 0명 → 500명 이상, 신규 과정 제안으로 <span class="hl-soft">담당 과정 최초 정원 조기 마감</span></li>
       <li><b>B2B 기업교육</b> — 공개교육 성과를 바탕으로 담당 확대, 사업·교육 제안서 작성, 임직원 AX 역량진단(수요조사) 기반 개발/비개발 직군별 맞춤 교육 설계, 만족도 분석 보고, 중소기업 인재키움 프리미엄 훈련 운영(<span class="hl-soft">HRD-Net 훈련 행정</span>)</li>
       <li><b>B2G 교육사업</b> — KOICA 전사 AX 역량 강화 교육 운영, 서울경제진흥원 새싹(SeSAC) 교육과정 운영 지원, 산업맞춤형 혁신바우처 지원사업, AI 아이디어톤 기획·운영</li>
